@@ -1,0 +1,96 @@
+/*================================================
+[  Table of contents  ]
+================================================
+
+1. Header Area
+
+2. Nav menu
+
+3. Contact Page
+
+4. Breadcump Area
+
+5. Restaurant Blog Area
+
+6. Comment Area
+
+7. Footer Area
+
+8. Footer-Area V2
+
+9. Home section V2
+
+10. Responsive css code
+
+/*======================================
+[ End table content ]
+======================================*/
+.site-header {
+    background-color: #fff;
+    padding: 12px;
+    margin-top: 30px;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+.header-image img {
+    width: 100%;
+}
+
+.header-top-left{    
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 15px;
+    background-color: #999;
+}
+
+
+.header-top-social {
+    float: right;
+    text-align: center;
+}
+.header-top-left i.fa {    
+    border-radius: 50%;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    color: #F2D222
+}
+.header-top-social > a {
+    margin-left: 8px;
+}
+.site-title {
+    font-size: 20px;
+    line-height: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.custom-middle-option {
+    padding: 30px 10px;
+}
+
+.site-title a {
+    color: #000;
+}
+
+.site-title strong {
+    font-size: 24px;
+}
+.logo-right-text > h1 {
+    text-transform: uppercase;
+}
+
+.logo-right-text h1 {
+    line-height: 117px;
+    vertical-align: middle;
+}
+
+.after-header {
+    font-size: 20px;
+}
+.after-header {
+    border-bottom: 3px solid #eee;   
+    margin-top: -6px;
+    padding: 12px;
+    text-align: right;
+}
