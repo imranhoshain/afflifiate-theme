@@ -37,7 +37,7 @@
     width: 100%;
 }
 
-.header-top-left{    
+.header-top-left {
     margin-top: 0;
     margin-bottom: 0;
     padding: 15px;
@@ -49,22 +49,26 @@
     float: right;
     text-align: center;
 }
-.header-top-left i.fa {    
+
+.header-top-left i.fa {
     border-radius: 50%;
     height: 30px;
     line-height: 30px;
     width: 30px;
     color: #F2D222
 }
-.header-top-social > a {
+
+.header-top-social>a {
     margin-left: 8px;
 }
+
 .site-title {
     font-size: 20px;
     line-height: 36px;
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .custom-middle-option {
     padding: 30px 10px;
 }
@@ -76,7 +80,8 @@
 .site-title strong {
     font-size: 24px;
 }
-.logo-right-text > h1 {
+
+.logo-right-text>h1 {
     text-transform: uppercase;
 }
 
@@ -88,9 +93,92 @@
 .after-header {
     font-size: 20px;
 }
+
 .after-header {
-    border-bottom: 3px solid #eee;   
+    border-bottom: 3px solid #eee;
     margin-top: -6px;
     padding: 12px;
     text-align: right;
+}
+
+.marquee-label,
+.marquee-post {
+    font-weight: bold;
+    padding: 10px;
+    float: left;
+}
+
+
+/* Navbar Menu */
+
+.navbar {
+    padding: 0;
+}
+
+.header-menu {
+    background: #212121 none repeat scroll 0 0;
+}
+
+
+.header-menu ul li a {
+    color: #ffffff;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    padding: 15px 12px !important;
+    text-align: center;
+    text-transform: uppercase;
+    transition: none 0s ease 0s;
+}
+
+.header-menu ul li a:hover {
+    background: #0b9;
+    color: #fff;
+}
+
+.header-menu ul li.active a {
+    background: #0b9;
+    color: #fff;
+}
+
+.header-menu ul li ul {
+    padding: 0;
+
+}
+
+.header-menu ul li ul li {
+    background: #000;
+
+}
+
+.header-menu ul li ul.dropdown-menu {
+    margin: 0;
+    border: none;
+}
+
+.header-menu ul li ul li a {
+    color: #fff;
+}
+
+.header-menu ul li ul li a:hover {
+    background: #0b9;
+    color: #fff;
+}
+
+/* footer section css */
+
+.footer-area{
+      background-color: #0b9;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 30px;
+}
+.footer-copywrite-text {
+    border-bottom: 2px solid #fff;
+
+    border-top: 2px solid #fff;
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
 }

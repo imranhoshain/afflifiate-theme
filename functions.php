@@ -140,7 +140,7 @@ include_once (get_template_directory() . '/inc/enqueue.php');
 /**
  * Implement Dropdown Menu.
  */
-include_once (get_template_directory() . '/inc/navwalker.php');
+include_once (get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php');
 
 /**
  * Themeoptions and metabox functions.
