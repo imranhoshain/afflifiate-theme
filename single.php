@@ -10,28 +10,65 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area single-post-content content-padding">
 		<main id="main" class="site-main">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="left-sidebar">
+						<?php if ( is_active_sidebar( 'page-left' ) ) {
+							dynamic_sidebar( 'page-left' );
+						}?>
+					</div>
+				</div>
+				<?php
+        			while (have_posts()):the_post()
+            	?>
+				<div class="col-md-7">
+					<div class="single-page-post">						
+		               	<?php if (has_post_thumbnail()) : ?>  
+		               	<div class="single-post-thumbnail">        
+	                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+	                            <?php the_post_thumbnail(); ?>
+	                        </a>
+	                    </div>		                    
+		                <?php endif; ?>			            
+						<div class="single-article-content">
+						    <h2 class="entry-title">
+			                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+			                </h2>
+							<p>
+							 	Published on: 
+							 	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php afflifiate_theme_posted_on(); ?></a> 
+							 	by  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php afflifiate_theme_posted_by();; ?></a> <?php edit_post_link('Edit');?>
+							</p>
+				            <div class="content">
+				                <?php the_content(); ?>
+					
+				            </div>				
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
+			                <?php 
+			            		// If comments are open or we have at least one comment, load up the comment template.
+								if ( comments_open() || get_comments_number() ) :
+									comments_template();
+								endif; 
+							?>	
+						</div>		           		 
+					</div>               
+				</div>	
+				<?php
+       				 endwhile;
+        		?>				
+				<div class="col-md-3">
+					<div class="right-sidebar">
+						<?php if ( is_active_sidebar( 'page-right' ) ) {
+							dynamic_sidebar( 'page-right' );
+						}?>
+					</div>
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

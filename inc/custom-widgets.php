@@ -5,48 +5,141 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function thenobility_widgets_init() {
+function afflifiate_theme_widgets_init() {
+
+	//Homepage left sidebar
 	register_sidebar( array(
-		'name'          => esc_html__( 'Main Sidebar', 'thenobility' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'thenobility' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'name'          => esc_html__( 'Homepage left sidebar', 'afflifiate-theme' ),
+		'id'            => 'home-left',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
     
-    //footer Widget
+    //Post left sidebar
     register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget', 'thenobility' ),
-		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Add information, logo, your address.', 'thenobility' ),
-		'before_widget' => '<div class="top-left">',
+		'name'          => esc_html__( 'Post left sidebar', 'afflifiate-theme' ),
+		'id'            => 'post-left',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 
-	 //footer Widget 2
+	 //Page left sidebar
     register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget 2', 'thenobility' ),
-		'id'            => 'footer-2',
-		'description'   => esc_html__( 'Add footer widget Style2 here.', 'thenobility' ),
-		'before_widget' => '<div class="footer-menu">',
+		'name'          => esc_html__( 'Page left sidebar', 'afflifiate-theme' ),
+		'id'            => 'page-left',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
     
-     //footer Widget 3
+     //Category left sidebar
     register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget 3', 'thenobility' ),
-		'id'            => 'footer-3',
-		'description'   => esc_html__( 'Add newasletter.', 'thenobility' ),
-		'before_widget' => '<div class="top-right">',
+		'name'          => esc_html__( 'Category left sidebar', 'afflifiate-theme' ),
+		'id'            => 'ctegory-left',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
+
+	//Error left sidebar
+    register_sidebar( array(
+		'name'          => esc_html__( 'Error left sidebar', 'afflifiate-theme' ),
+		'id'            => 'error-left',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	//Search left sidebar
+    register_sidebar( array(
+		'name'          => esc_html__( 'Search left sidebar', 'afflifiate-theme' ),
+		'id'            => 'search-left',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+
+
+	//Homepage right sidebar
+	register_sidebar( array(
+		'name'          => esc_html__( 'Homepage right sidebar', 'afflifiate-theme' ),
+		'id'            => 'home-right',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+    
+    //Post right sidebar
+    register_sidebar( array(
+		'name'          => esc_html__( 'Post right sidebar', 'afflifiate-theme' ),
+		'id'            => 'post-right',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	 //Page right sidebar
+    register_sidebar( array(
+		'name'          => esc_html__( 'Page right sidebar', 'afflifiate-theme' ),
+		'id'            => 'page-right',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+    
+     //Category right sidebar
+    register_sidebar( array(
+		'name'          => esc_html__( 'Category right sidebar', 'afflifiate-theme' ),
+		'id'            => 'ctegory-right',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	//Error right sidebar
+    register_sidebar( array(
+		'name'          => esc_html__( 'Error right sidebar', 'afflifiate-theme' ),
+		'id'            => 'error-right',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	//Search right sidebar
+    register_sidebar( array(
+		'name'          => esc_html__( 'Search right sidebar', 'afflifiate-theme' ),
+		'id'            => 'search-right',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
 }
-add_action( 'widgets_init', 'thenobility_widgets_init' );
+add_action( 'widgets_init', 'afflifiate_theme_widgets_init' );
