@@ -403,6 +403,7 @@ function afflifiate_theme_options($options)
                 'title' => 'Display Posted On',
                 'default' => true
             ),
+            
             array(
                 'id' => 'enable_post_category',
                 'type' => 'switcher',
@@ -431,9 +432,150 @@ function afflifiate_theme_options($options)
     );
     
     // Blog Option End
-    // Start footer acordian
-    
- $options[] = array(
+
+    // Advertise section acordian    
+    $options[] = array(
+        'name' => 'advertise_options',
+        'title' => 'Advertise Options',
+        'icon' => 'fa fa-minus',
+        'sections' => array(   
+
+            array(
+                'name' => 'blog_page_advertise',
+                'title' => 'Blog Page Adds',
+                'icon' => 'fa fa-minus',                
+                'fields' => array(
+                    array(
+                        'id' => 'blog_post_adds_two',
+                        'type' => 'switcher',
+                        'title' => 'Its Option For Blog Page',
+                        'desc'    => 'Use code for after two post',
+                        'default' => true
+                    ),                        
+                         array(
+                        'id' => 'blog_post_adds_field_two',
+                        'type' => 'textarea',
+                        'title' => 'Blog Post cript Option',
+                        'dependency' => array(
+                            'blog_post_adds_two',
+                            '==',
+                            'true'
+                        ),          
+   
+                    ),
+                    array(
+                        'id' => 'blog_post_adds_four',
+                        'type' => 'switcher',
+                        'title' => 'Its Option For Blog Page',
+                        'desc'    => 'Use code for after four post',
+                        'default' => true
+                    ),                        
+                         array(
+                        'id' => 'blog_post_adds_field_four',
+                        'type' => 'textarea',
+                        'title' => 'Blog Post cript Option',
+                        'dependency' => array(
+                            'blog_post_adds_four',
+                            '==',
+                            'true'
+                        ),          
+   
+                    ),
+
+                        array(
+                        'id' => 'blog_post_adds_six',
+                        'type' => 'switcher',
+                        'title' => 'Its Option For Blog Page',
+                        'desc'    => 'Use code for after six post',
+                        'default' => true
+                    ),                        
+                         array(
+                        'id' => 'blog_post_adds_field_six',
+                        'type' => 'textarea',
+                        'title' => 'Blog Post cript Option',
+                        'dependency' => array(
+                            'blog_post_adds_six',
+                            '==',
+                            'true'
+                        ),          
+   
+                    ),
+
+                         array(
+                        'id' => 'blog_post_adds_eight',
+                        'type' => 'switcher',
+                        'title' => 'Its Option For Blog Page',
+                        'desc'    => 'Use code for after eight post',
+                        'default' => true
+                    ),                        
+                         array(
+                        'id' => 'blog_post_adds_field_eight',
+                        'type' => 'textarea',
+                        'title' => 'Blog Post cript Option',
+                        'dependency' => array(
+                            'blog_post_adds_eight',
+                            '==',
+                            'true'
+                        ),          
+   
+                    ),
+
+                        array(
+                        'id' => 'blog_post_adds_ten',
+                        'type' => 'switcher',
+                        'title' => 'Its Option For Blog Page',
+                        'desc'    => 'Use code for after ten post',
+                        'default' => true
+                    ),                        
+                         array(
+                        'id' => 'blog_post_adds_field_ten',
+                        'type' => 'textarea',
+                        'title' => 'Blog Post cript Option',
+                        'dependency' => array(
+                            'blog_post_adds_ten',
+                            '==',
+                            'true'
+                        ),          
+   
+                    ),
+                
+                ),
+            ),
+
+            array(
+                'name' => 'footer_page_advertise',
+                'title' => 'Footer Page Adds',
+                'icon' => 'fa fa-minus',                
+                'fields' => array(
+                    array(
+                        'id' => 'blog_post_adyds_two',
+                        'type' => 'switcher',
+                        'title' => 'Its Option For Blog Page',
+                        'desc'    => 'Use code for after two post',
+                        'default' => true
+                    ),                        
+                         array(
+                        'id' => 'blog_posty_adds_field_two',
+                        'type' => 'textarea',
+                        'title' => 'Blog Post cript Option',
+                        'dependency' => array(
+                            'blog_post_adds_two',
+                            '==',
+                            'true'
+                        ),          
+   
+                    ),
+                 
+                   
+                
+                ),
+            )
+        )                
+        
+    );
+
+    // Start footer acordian    
+    $options[] = array(
         'name' => 'footer_options',
         'title' => 'Footer Options',
         'icon' => 'fa fa-minus',
@@ -446,14 +588,14 @@ function afflifiate_theme_options($options)
                 'title' => 'Footer CopyWrite Section',
                 'icon' => 'fa fa-minus',
                 
+                'fields' => array(
+                    array(
+                        'id' => 'footer_copy_write_field',
+                        'type' => 'fieldset',
+                        'title' => 'Footer CopyWrite Field',
                         'fields' => array(
-                           array(
-  'id'        => 'footer_copy_write_field',
-  'type'      => 'fieldset',
-  'title'     => 'Footer CopyWrite Field',
-  'fields'    => array(
-
-   array(
+                            
+                            array(
                                 'id' => 'footer_copy_write_text',
                                 'type' => 'textarea',
                                 'title' => 'Footer CopyWrite Text'
@@ -472,18 +614,15 @@ function afflifiate_theme_options($options)
                                 'default' => '#0b9',
                                 'rgba' => true
                             )
-
-  ),
-),
-
-                           
-                           
-                        ),                 
-                   
-                ),
-            ),
-           
-           
+                            
+                        )
+                    )       
+                    
+                    
+                )
+                
+            )
+        )                
         
     );
     // End footer acordian
@@ -514,6 +653,5 @@ function afflifiate_theme_custom_framework_options($options)
 }
 
 add_filter('cs_customize_options', 'afflifiate_theme_custom_framework_options');
-
 
 

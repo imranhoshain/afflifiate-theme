@@ -20,30 +20,30 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area theme-comment-section">
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
+		<h3 class="comments-title">
 			<?php
 			$afflifiate_theme_comment_count = get_comments_number();
 			if ( '1' === $afflifiate_theme_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'afflifiate-theme' ),
+					esc_html__( 'One responses on &ldquo;%1$s&rdquo;', 'afflifiate-theme' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $afflifiate_theme_comment_count, 'comments title', 'afflifiate-theme' ) ),
+					esc_html( _nx( '%1$s responses on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $afflifiate_theme_comment_count, 'comments title', 'afflifiate-theme' ) ),
 					number_format_i18n( $afflifiate_theme_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			}
 			?>
-		</h2><!-- .comments-title -->
+		</h3><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
 

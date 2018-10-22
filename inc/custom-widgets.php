@@ -141,5 +141,100 @@ function afflifiate_theme_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
+
+
+    //Footer Top Widget
+    register_sidebar( array(
+		'name'          => esc_html__( 'Home Top Footer', 'afflifiate-theme' ),
+		'id'            => 'home-top-footer',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+    //Footer Top Widget
+    register_sidebar( array(
+		'name'          => esc_html__( 'Home Top Footer', 'afflifiate-theme' ),
+		'id'            => 'home-top-footer',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	 register_sidebar( array(
+		'name'          => esc_html__( 'Page Top Footer', 'afflifiate-theme' ),
+		'id'            => 'page-top-footer',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	  register_sidebar( array(
+		'name'          => esc_html__( 'Post Top Footer', 'afflifiate-theme' ),
+		'id'            => 'post-top-footer',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	   register_sidebar( array(
+		'name'          => esc_html__( 'Category Top Footer', 'afflifiate-theme' ),
+		'id'            => 'category-top-footer',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+
+	//Footer Bottom Footer
+    register_sidebar( array(
+		'name'          => esc_html__( 'Home Bottom Footer', 'afflifiate-theme' ),
+		'id'            => 'home-bottom-footer',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	 register_sidebar( array(
+		'name'          => esc_html__( 'Page Bottom Footer', 'afflifiate-theme' ),
+		'id'            => 'page-bottom-footer',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	  register_sidebar( array(
+		'name'          => esc_html__( 'Post Bottom Footer', 'afflifiate-theme' ),
+		'id'            => 'post-bottom-footer',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	   register_sidebar( array(
+		'name'          => esc_html__( 'Category Bottom Footer', 'afflifiate-theme' ),
+		'id'            => 'category-bottom-footer',
+		'description'   => esc_html__( 'Add widgets here.', 'afflifiate-theme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'afflifiate_theme_widgets_init' );

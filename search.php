@@ -10,8 +10,18 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area content-search-page content-padding">
 		<main id="main" class="site-main">
+			<div class="row">
+			<div class="col-md-2">
+				<div class="left-sidebar">
+					<?php if ( is_active_sidebar( 'page-left' ) ) {
+						dynamic_sidebar( 'page-left' );
+					}?>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="row">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -46,6 +56,16 @@ get_header();
 
 		endif;
 		?>
+			</div>
+			</div>
+			<div class="col-md-3">
+				<div class="right-sidebar">
+					<?php if ( is_active_sidebar( 'page-right' ) ) {
+						dynamic_sidebar( 'page-right' );
+					}?>
+				</div>
+			</div>
+		</div>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->

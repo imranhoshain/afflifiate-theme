@@ -116,6 +116,12 @@ return $fields;
 
 add_filter( 'comment_form_fields', 'afflifiate_theme_move_comment_field_to_bottom' );
 
+//Excerpt Count Option
+function custom_short_excerpt($excerpt){
+	return substr($excerpt, 0, 300);
+}
+add_filter('the_excerpt', 'custom_short_excerpt');
+
 /**
  * Implement the Custom Header feature.
  */
@@ -155,3 +161,4 @@ include_once (get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php'
  * Themeoptions and metabox functions.
  */
 include_once (get_template_directory().'/inc/theme-metabox-and-options.php');
+

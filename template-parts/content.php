@@ -6,6 +6,7 @@
 *
 * @package afflifiate_theme
 */
+
 ?>
 <div class="col-md-6">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -12,6 +12,22 @@
 * @package afflifiate_theme
 */
 get_header();
+
+$blog_post_adds_two = cs_get_option( 'blog_post_adds_two' );
+$blog_post_adds_field_two = cs_get_option( 'blog_post_adds_field_two' );
+
+$blog_post_adds_four = cs_get_option( 'blog_post_adds_four' );
+$blog_post_adds_field_four = cs_get_option( 'blog_post_adds_field_four' );
+
+$blog_post_adds_six = cs_get_option( 'blog_post_adds_six' );
+$blog_post_adds_field_six = cs_get_option( 'blog_post_adds_field_six' );
+
+$blog_post_adds_eight = cs_get_option( 'blog_post_adds_eight' );
+$blog_post_adds_field_eight = cs_get_option( 'blog_post_adds_field_eight' );
+
+$blog_post_adds_ten = cs_get_option( 'blog_post_adds_ten' );
+$blog_post_adds_field_ten = cs_get_option( 'blog_post_adds_field_ten' );
+
 ?>
 <div id="primary" class="content-area blog-page-content content-padding">
 	<main id="main" class="site-main">
@@ -26,15 +42,8 @@ get_header();
 			<div class="col-md-7">
 				<div class="row">
 					<?php
-					if ( have_posts() ) :
-					/*
-						if ( is_home() && ! is_front_page() ) :
-					?>
-					<header>
-						<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-					</header>
-					<?php
-					endif;*/
+					if ( have_posts() ) : $postnum=0;
+					
 					/* Start the Loop */
 					while ( have_posts() ) :
 					the_post();
@@ -44,6 +53,42 @@ get_header();
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
 					get_template_part( 'template-parts/content', get_post_type() );
+					$postnum++;
+						if($blog_post_adds_two){
+					    if ($postnum == 2) { ?>
+				            <div class="col-md-12 mt-2 mb-3">
+				            	<?php echo $blog_post_adds_field_two; ?>
+				            </div>
+					    <?php } }
+
+					    if($blog_post_adds_four){
+					    if ($postnum == 4) { ?>
+				            <div class="col-md-12 mt-2 mb-3">
+				            	<?php echo $blog_post_adds_field_four; ?>
+				            </div>
+					    <?php } }
+
+					    if($blog_post_adds_six){
+					    if ($postnum == 6) { ?>
+				            <div class="col-md-12 mt-2 mb-3">
+				            	<?php echo $blog_post_adds_field_six; ?>
+				            </div>
+					    <?php } }
+
+					    if($blog_post_adds_eight){
+					    if ($postnum == 8) { ?>
+				            <div class="col-md-12 mt-2 mb-3">
+				            	<?php echo $blog_post_adds_field_eight; ?>
+				            </div>
+					    <?php } }
+
+					    if($blog_post_adds_ten){
+					    if ($postnum == 10) { ?>
+				            <div class="col-md-12 mt-2 mb-3">
+				            	<?php echo $blog_post_adds_field_ten; ?>
+				            </div>
+					    <?php } }
+
 					endwhile;
 					the_posts_navigation();
 					else :
