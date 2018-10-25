@@ -217,16 +217,24 @@ function afflifiate_theme_options($options)
                                 'add_title' => 'Add Logo'
                             ),
                             array(
+                                'id' => 'header_banner',
+                                'type' => 'image',
+                                'title' => 'Header Banner With Logo',
+                                'desc' => 'If use this option (not use gradient color option) ',
+                                'add_title' => 'Add Banner'
+                            ),
+                            array(
                                 'id' => 'header_logo_text',
                                 'type' => 'text',
                                 'title' => 'Logo Right Text'
                             ),
                             array(
                                 'id' => 'hlogo_bg_color',
-                                'type' => 'color_picker',
+                                'type' => 'textarea',
                                 'title' => 'Logo Area BG Color',
-                                'default' => '#ffbc00',
-                                'rgba' => true
+                                'default' => 'linear-gradient(to bottom, #33ccff 6%, #66ff99 84%);',
+                                'desc' => 'This is gradient color option'
+                                
                             ),
                             array(
                                 'id' => 'hlogo_text_color',
@@ -432,27 +440,27 @@ function afflifiate_theme_options($options)
     );
     
     // Blog Option End
-
+    
     // Advertise section acordian    
     $options[] = array(
         'name' => 'advertise_options',
         'title' => 'Advertise Options',
         'icon' => 'fa fa-minus',
-        'sections' => array(   
-
+        'sections' => array(
+            
             array(
                 'name' => 'blog_page_advertise',
                 'title' => 'Blog Page Adds',
-                'icon' => 'fa fa-minus',                
+                'icon' => 'fa fa-minus',
                 'fields' => array(
                     array(
                         'id' => 'blog_post_adds_two',
                         'type' => 'switcher',
                         'title' => 'Its Option For Blog Page',
-                        'desc'    => 'Use code for after two post',
+                        'desc' => 'Use code for after two post',
                         'default' => true
-                    ),                        
-                         array(
+                    ),
+                    array(
                         'id' => 'blog_post_adds_field_two',
                         'type' => 'textarea',
                         'title' => 'Blog Post cript Option',
@@ -460,17 +468,17 @@ function afflifiate_theme_options($options)
                             'blog_post_adds_two',
                             '==',
                             'true'
-                        ),          
-   
+                        )
+                        
                     ),
                     array(
                         'id' => 'blog_post_adds_four',
                         'type' => 'switcher',
                         'title' => 'Its Option For Blog Page',
-                        'desc'    => 'Use code for after four post',
+                        'desc' => 'Use code for after four post',
                         'default' => true
-                    ),                        
-                         array(
+                    ),
+                    array(
                         'id' => 'blog_post_adds_field_four',
                         'type' => 'textarea',
                         'title' => 'Blog Post cript Option',
@@ -478,18 +486,18 @@ function afflifiate_theme_options($options)
                             'blog_post_adds_four',
                             '==',
                             'true'
-                        ),          
-   
+                        )
+                        
                     ),
-
-                        array(
+                    
+                    array(
                         'id' => 'blog_post_adds_six',
                         'type' => 'switcher',
                         'title' => 'Its Option For Blog Page',
-                        'desc'    => 'Use code for after six post',
+                        'desc' => 'Use code for after six post',
                         'default' => true
-                    ),                        
-                         array(
+                    ),
+                    array(
                         'id' => 'blog_post_adds_field_six',
                         'type' => 'textarea',
                         'title' => 'Blog Post cript Option',
@@ -497,18 +505,18 @@ function afflifiate_theme_options($options)
                             'blog_post_adds_six',
                             '==',
                             'true'
-                        ),          
-   
+                        )
+                        
                     ),
-
-                         array(
+                    
+                    array(
                         'id' => 'blog_post_adds_eight',
                         'type' => 'switcher',
                         'title' => 'Its Option For Blog Page',
-                        'desc'    => 'Use code for after eight post',
+                        'desc' => 'Use code for after eight post',
                         'default' => true
-                    ),                        
-                         array(
+                    ),
+                    array(
                         'id' => 'blog_post_adds_field_eight',
                         'type' => 'textarea',
                         'title' => 'Blog Post cript Option',
@@ -516,18 +524,18 @@ function afflifiate_theme_options($options)
                             'blog_post_adds_eight',
                             '==',
                             'true'
-                        ),          
-   
+                        )
+                        
                     ),
-
-                        array(
+                    
+                    array(
                         'id' => 'blog_post_adds_ten',
                         'type' => 'switcher',
                         'title' => 'Its Option For Blog Page',
-                        'desc'    => 'Use code for after ten post',
+                        'desc' => 'Use code for after ten post',
                         'default' => true
-                    ),                        
-                         array(
+                    ),
+                    array(
                         'id' => 'blog_post_adds_field_ten',
                         'type' => 'textarea',
                         'title' => 'Blog Post cript Option',
@@ -535,45 +543,539 @@ function afflifiate_theme_options($options)
                             'blog_post_adds_ten',
                             '==',
                             'true'
-                        ),          
-   
-                    ),
-                
-                ),
+                        )
+                        
+                    )
+                    
+                )
             ),
-
+            
             array(
                 'name' => 'footer_page_advertise',
-                'title' => 'Footer Page Adds',
-                'icon' => 'fa fa-minus',                
+                'title' => 'Footer Page Top Adds',
+                'icon' => 'fa fa-minus',
                 'fields' => array(
                     array(
-                        'id' => 'blog_post_adyds_two',
+                        'id' => 'footer_page_top_advertise',
                         'type' => 'switcher',
-                        'title' => 'Its Option For Blog Page',
-                        'desc'    => 'Use code for after two post',
+                        'title' => 'Its Option For Footer Section',
+                        'desc' => 'On this option for footer',
                         'default' => true
-                    ),                        
-                         array(
-                        'id' => 'blog_posty_adds_field_two',
-                        'type' => 'textarea',
-                        'title' => 'Blog Post cript Option',
+                    ),
+
+                    array(
+                        'id' => 'footer_page_top_adds',
+                        'type' => 'group',
+                        'title' => 'Footer Page Top  Adds',
                         'dependency' => array(
-                            'blog_post_adds_two',
+                            'footer_page_top_advertise',
                             '==',
                             'true'
-                        ),          
-   
+                        ),
+                        'button_title' => 'Add New Advertise',
+                        'accordion_title' => 'Add New Page Adds',
+                        'fields' => array(
+                            array(
+                                'id' => 'col_number',
+                                'type' => 'select',
+                                'title' => 'Select Colum Number',
+                                'options' => array(
+                                    '1' => 'col-md-1',
+                                    '2' => 'col-md-2',
+                                    '3' => 'col-md-3',
+                                    '4' => 'col-md-4',
+                                    '5' => 'col-md-5',
+                                    '6' => 'col-md-6',
+                                    '7' => 'col-md-7',
+                                    '8' => 'col-md-8',
+                                    '9' => 'col-md-9',
+                                    '10' => 'col-md-10',
+                                    '11' => 'col-md-11',
+                                    '12' => 'col-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'offset_number',
+                                'type' => 'select',
+                                'title' => 'Select Offset Number',
+                                'options' => array(
+                                    '0' => 'offset-md-0',
+                                    '1' => 'offset-md-1',
+                                    '2' => 'offset-md-2',
+                                    '3' => 'offset-md-3',
+                                    '4' => 'offset-md-4',
+                                    '5' => 'offset-md-5',
+                                    '6' => 'offset-md-6',
+                                    '7' => 'offset-md-7',
+                                    '8' => 'offset-md-8',
+                                    '9' => 'offset-md-9',
+                                    '10' => 'offset-md-10',
+                                    '11' => 'offset-md-11',
+                                    '12' => 'offset-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'front_page_add',
+                                'type' => 'textarea',
+                                'title' => 'This adds for Page'
+                            )
+  
+                        )
+ 
+                    ),
+
+                    array(
+                        'id' => 'footer_page_blog_top_adds',
+                        'type' => 'group',
+                        'title' => 'Footer Blog Page Top Adds',
+                        'dependency' => array(
+                            'footer_page_top_advertise',
+                            '==',
+                            'true'
+                        ),
+                        'button_title' => 'Add New Advertise',
+                        'accordion_title' => 'Add New Blog Adds',
+                        'fields' => array(
+                            array(
+                                'id' => 'col_number',
+                                'type' => 'select',
+                                'title' => 'Select Colum Number',
+                                'options' => array(
+                                    '1' => 'col-md-1',
+                                    '1' => 'col-md-1',
+                                    '2' => 'col-md-2',
+                                    '3' => 'col-md-3',
+                                    '4' => 'col-md-4',
+                                    '5' => 'col-md-5',
+                                    '6' => 'col-md-6',
+                                    '7' => 'col-md-7',
+                                    '8' => 'col-md-8',
+                                    '9' => 'col-md-9',
+                                    '10' => 'col-md-10',
+                                    '11' => 'col-md-11',
+                                    '12' => 'col-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'offset_number',
+                                'type' => 'select',
+                                'title' => 'Select Offset Number',
+                                'options' => array(
+                                    '0' => 'offset-md-0',
+                                    '1' => 'offset-md-1',
+                                    '2' => 'offset-md-2',
+                                    '3' => 'offset-md-3',
+                                    '4' => 'offset-md-4',
+                                    '5' => 'offset-md-5',
+                                    '6' => 'offset-md-6',
+                                    '7' => 'offset-md-7',
+                                    '8' => 'offset-md-8',
+                                    '9' => 'offset-md-9',
+                                    '10' => 'offset-md-10',
+                                    '11' => 'offset-md-11',
+                                    '12' => 'offset-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'front_page_add',
+                                'type' => 'textarea',
+                                'title' => 'This adds for blog Page'
+                            )
+  
+                        )
+ 
+                    ),
+
+                    array(
+                        'id' => 'footer_single_page_top_adds',
+                        'type' => 'group',
+                        'title' => 'Footer Single Page Top Adds',
+                        'dependency' => array(
+                            'footer_page_top_advertise',
+                            '==',
+                            'true'
+                        ),
+                        'button_title' => 'Add New Advertise',
+                        'accordion_title' => 'Add New Single Adds',
+                        'fields' => array(
+                            array(
+                                'id' => 'col_number',
+                                'type' => 'select',
+                                'title' => 'Select Colum Number',
+                                'options' => array(
+                                    '1' => 'col-md-1',
+                                    '2' => 'col-md-2',
+                                    '3' => 'col-md-3',
+                                    '4' => 'col-md-4',
+                                    '5' => 'col-md-5',
+                                    '6' => 'col-md-6',
+                                    '7' => 'col-md-7',
+                                    '8' => 'col-md-8',
+                                    '9' => 'col-md-9',
+                                    '10' => 'col-md-10',
+                                    '11' => 'col-md-11',
+                                    '12' => 'col-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'offset_number',
+                                'type' => 'select',
+                                'title' => 'Select Offset Number',
+                                'options' => array(
+                                    '0' => 'offset-md-0',
+                                    '1' => 'offset-md-1',
+                                    '2' => 'offset-md-2',
+                                    '3' => 'offset-md-3',
+                                    '4' => 'offset-md-4',
+                                    '5' => 'offset-md-5',
+                                    '6' => 'offset-md-6',
+                                    '7' => 'offset-md-7',
+                                    '8' => 'offset-md-8',
+                                    '9' => 'offset-md-9',
+                                    '10' => 'offset-md-10',
+                                    '11' => 'offset-md-11',
+                                    '12' => 'offset-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'single_page_ads',
+                                'type' => 'textarea',
+                                'title' => 'This adds for single Page'
+                            )
+  
+                        )
+ 
+                    ),
+
+                        array(
+                        'id' => 'footer_category_page_top_adds',
+                        'type' => 'group',
+                        'title' => 'Footer Category Page Top Adds',
+                        'dependency' => array(
+                            'footer_page_top_advertise',
+                            '==',
+                            'true'
+                        ),
+                        'button_title' => 'Add New Advertise',
+                        'accordion_title' => 'Add New Category Adds',
+                        'fields' => array(
+                            array(
+                                'id' => 'col_number',
+                                'type' => 'select',
+                                'title' => 'Select Colum Number',
+                                'options' => array(
+                                    '1' => 'col-md-1',
+                                    '2' => 'col-md-2',
+                                    '3' => 'col-md-3',
+                                    '4' => 'col-md-4',
+                                    '5' => 'col-md-5',
+                                    '6' => 'col-md-6',
+                                    '7' => 'col-md-7',
+                                    '8' => 'col-md-8',
+                                    '9' => 'col-md-9',
+                                    '10' => 'col-md-10',
+                                    '11' => 'col-md-11',
+                                    '12' => 'col-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'offset_number',
+                                'type' => 'select',
+                                'title' => 'Select Offset Number',
+                                'options' => array(
+                                    '0' => 'offset-md-0',
+                                    '1' => 'offset-md-1',
+                                    '2' => 'offset-md-2',
+                                    '3' => 'offset-md-3',
+                                    '4' => 'offset-md-4',
+                                    '5' => 'offset-md-5',
+                                    '6' => 'offset-md-6',
+                                    '7' => 'offset-md-7',
+                                    '8' => 'offset-md-8',
+                                    '9' => 'offset-md-9',
+                                    '10' => 'offset-md-10',
+                                    '11' => 'offset-md-11',
+                                    '12' => 'offset-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'single_page_ads',
+                                'type' => 'textarea',
+                                'title' => 'This adds for single Page'
+                            )
+  
+                        )
+ 
                     ),
                  
-                   
-                
-                ),
+   
+                )
+            ),
+            array(
+                'name' => 'footer_bottom_advertise',
+                'title' => 'Footer Page bottom Adds',
+                'icon' => 'fa fa-minus',
+                'fields' => array(
+                    array(
+                        'id' => 'footer_page_bottom_advertise',
+                        'type' => 'switcher',
+                        'title' => 'Its Option For Footer Section',
+                        'desc' => 'On this option for footer',
+                        'default' => true
+                    ),
+
+                    array(
+                        'id' => 'footer_page_bottom_adds',
+                        'type' => 'group',
+                        'title' => 'Footer Page bottom  Adds',
+                        'dependency' => array(
+                            'footer_page_bottom_advertise',
+                            '==',
+                            'true'
+                        ),
+                        'button_title' => 'Add New Advertise',
+                        'accordion_title' => 'Add New Page Adds',
+                        'fields' => array(
+                            array(
+                                'id' => 'col_number',
+                                'type' => 'select',
+                                'title' => 'Select Colum Number',
+                                'options' => array(
+                                    '1' => 'col-md-1',
+                                    '2' => 'col-md-2',
+                                    '3' => 'col-md-3',
+                                    '4' => 'col-md-4',
+                                    '5' => 'col-md-5',
+                                    '6' => 'col-md-6',
+                                    '7' => 'col-md-7',
+                                    '8' => 'col-md-8',
+                                    '9' => 'col-md-9',
+                                    '10' => 'col-md-10',
+                                    '11' => 'col-md-11',
+                                    '12' => 'col-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'offset_number',
+                                'type' => 'select',
+                                'title' => 'Select Offset Number',
+                                'options' => array(
+                                    '0' => 'offset-md-0',
+                                    '1' => 'offset-md-1',
+                                    '2' => 'offset-md-2',
+                                    '3' => 'offset-md-3',
+                                    '4' => 'offset-md-4',
+                                    '5' => 'offset-md-5',
+                                    '6' => 'offset-md-6',
+                                    '7' => 'offset-md-7',
+                                    '8' => 'offset-md-8',
+                                    '9' => 'offset-md-9',
+                                    '10' => 'offset-md-10',
+                                    '11' => 'offset-md-11',
+                                    '12' => 'offset-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'front_page_add',
+                                'type' => 'textarea',
+                                'title' => 'This adds for Page'
+                            )
+  
+                        )
+ 
+                    ),
+
+                    array(
+                        'id' => 'footer_page_blog_bottom_adds',
+                        'type' => 'group',
+                        'title' => 'Footer Blog Page bottom Adds',
+                        'dependency' => array(
+                            'footer_page_bottom_advertise',
+                            '==',
+                            'true'
+                        ),
+                        'button_title' => 'Add New Advertise',
+                        'accordion_title' => 'Add New Blog Adds',
+                        'fields' => array(
+                            array(
+                                'id' => 'col_number',
+                                'type' => 'select',
+                                'title' => 'Select Colum Number',
+                                'options' => array(
+                                    '1' => 'col-md-1',
+                                    '1' => 'col-md-1',
+                                    '2' => 'col-md-2',
+                                    '3' => 'col-md-3',
+                                    '4' => 'col-md-4',
+                                    '5' => 'col-md-5',
+                                    '6' => 'col-md-6',
+                                    '7' => 'col-md-7',
+                                    '8' => 'col-md-8',
+                                    '9' => 'col-md-9',
+                                    '10' => 'col-md-10',
+                                    '11' => 'col-md-11',
+                                    '12' => 'col-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'offset_number',
+                                'type' => 'select',
+                                'title' => 'Select Offset Number',
+                                'options' => array(
+                                    '0' => 'offset-md-0',
+                                    '1' => 'offset-md-1',
+                                    '2' => 'offset-md-2',
+                                    '3' => 'offset-md-3',
+                                    '4' => 'offset-md-4',
+                                    '5' => 'offset-md-5',
+                                    '6' => 'offset-md-6',
+                                    '7' => 'offset-md-7',
+                                    '8' => 'offset-md-8',
+                                    '9' => 'offset-md-9',
+                                    '10' => 'offset-md-10',
+                                    '11' => 'offset-md-11',
+                                    '12' => 'offset-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'front_page_add',
+                                'type' => 'textarea',
+                                'title' => 'This adds for blog Page'
+                            )
+  
+                        )
+ 
+                    ),
+
+                    array(
+                        'id' => 'footer_single_page_bottom_adds',
+                        'type' => 'group',
+                        'title' => 'Footer Single Page bottom Adds',
+                        'dependency' => array(
+                            'footer_page_bottom_advertise',
+                            '==',
+                            'true'
+                        ),
+                        'button_title' => 'Add New Advertise',
+                        'accordion_title' => 'Add New Single Adds',
+                        'fields' => array(
+                            array(
+                                'id' => 'col_number',
+                                'type' => 'select',
+                                'title' => 'Select Colum Number',
+                                'options' => array(
+                                    '1' => 'col-md-1',
+                                    '2' => 'col-md-2',
+                                    '3' => 'col-md-3',
+                                    '4' => 'col-md-4',
+                                    '5' => 'col-md-5',
+                                    '6' => 'col-md-6',
+                                    '7' => 'col-md-7',
+                                    '8' => 'col-md-8',
+                                    '9' => 'col-md-9',
+                                    '10' => 'col-md-10',
+                                    '11' => 'col-md-11',
+                                    '12' => 'col-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'offset_number',
+                                'type' => 'select',
+                                'title' => 'Select Offset Number',
+                                'options' => array(
+                                    '0' => 'offset-md-0',
+                                    '1' => 'offset-md-1',
+                                    '2' => 'offset-md-2',
+                                    '3' => 'offset-md-3',
+                                    '4' => 'offset-md-4',
+                                    '5' => 'offset-md-5',
+                                    '6' => 'offset-md-6',
+                                    '7' => 'offset-md-7',
+                                    '8' => 'offset-md-8',
+                                    '9' => 'offset-md-9',
+                                    '10' => 'offset-md-10',
+                                    '11' => 'offset-md-11',
+                                    '12' => 'offset-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'single_page_ads',
+                                'type' => 'textarea',
+                                'title' => 'This adds for single Page'
+                            )
+  
+                        )
+ 
+                    ),
+
+                        array(
+                        'id' => 'footer_category_page_bottom_adds',
+                        'type' => 'group',
+                        'title' => 'Footer Category Page bottom Adds',
+                        'dependency' => array(
+                            'footer_page_bottom_advertise',
+                            '==',
+                            'true'
+                        ),
+                        'button_title' => 'Add New Advertise',
+                        'accordion_title' => 'Add New Category Adds',
+                        'fields' => array(
+                            array(
+                                'id' => 'col_number',
+                                'type' => 'select',
+                                'title' => 'Select Colum Number',
+                                'options' => array(
+                                    '1' => 'col-md-1',
+                                    '2' => 'col-md-2',
+                                    '3' => 'col-md-3',
+                                    '4' => 'col-md-4',
+                                    '5' => 'col-md-5',
+                                    '6' => 'col-md-6',
+                                    '7' => 'col-md-7',
+                                    '8' => 'col-md-8',
+                                    '9' => 'col-md-9',
+                                    '10' => 'col-md-10',
+                                    '11' => 'col-md-11',
+                                    '12' => 'col-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'offset_number',
+                                'type' => 'select',
+                                'title' => 'Select Offset Number',
+                                'options' => array(
+                                    '0' => 'offset-md-0',
+                                    '1' => 'offset-md-1',
+                                    '2' => 'offset-md-2',
+                                    '3' => 'offset-md-3',
+                                    '4' => 'offset-md-4',
+                                    '5' => 'offset-md-5',
+                                    '6' => 'offset-md-6',
+                                    '7' => 'offset-md-7',
+                                    '8' => 'offset-md-8',
+                                    '9' => 'offset-md-9',
+                                    '10' => 'offset-md-10',
+                                    '11' => 'offset-md-11',
+                                    '12' => 'offset-md-12'
+                                )
+                            ),
+                            array(
+                                'id' => 'single_page_ads',
+                                'type' => 'textarea',
+                                'title' => 'This adds for single Page'
+                            )
+  
+                        )
+ 
+                    ),
+                 
+   
+                )
             )
-        )                
+        )
         
     );
-
+    
     // Start footer acordian    
     $options[] = array(
         'name' => 'footer_options',
@@ -616,13 +1118,13 @@ function afflifiate_theme_options($options)
                             )
                             
                         )
-                    )       
+                    )
                     
                     
                 )
                 
             )
-        )                
+        )
         
     );
     // End footer acordian
@@ -653,5 +1155,4 @@ function afflifiate_theme_custom_framework_options($options)
 }
 
 add_filter('cs_customize_options', 'afflifiate_theme_custom_framework_options');
-
 

@@ -15,8 +15,8 @@ get_header();
 			<div class="row">
 				<div class="col-md-2">
 					<div class="left-sidebar">
-						<?php if ( is_active_sidebar( 'page-left' ) ) {
-							dynamic_sidebar( 'page-left' );
+						<?php if ( is_active_sidebar( 'post-left-widget' ) ) {
+							dynamic_sidebar( 'post-left-widget' );
 						}?>
 					</div>
 				</div>
@@ -60,8 +60,8 @@ get_header();
         		?>				
 				<div class="col-md-3">
 					<div class="right-sidebar">
-						<?php if ( is_active_sidebar( 'page-right' ) ) {
-							dynamic_sidebar( 'page-right' );
+						<?php if ( is_active_sidebar( 'post-right-widget' ) ) {
+							dynamic_sidebar( 'post-right-widget' );
 						}?>
 					</div>
 				</div>

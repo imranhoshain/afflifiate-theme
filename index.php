@@ -34,8 +34,8 @@ $blog_post_adds_field_ten = cs_get_option( 'blog_post_adds_field_ten' );
 		<div class="row">
 			<div class="col-md-2">
 				<div class="left-sidebar">
-					<?php if ( is_active_sidebar( 'page-left' ) ) {
-						dynamic_sidebar( 'page-left' );
+					<?php if ( is_active_sidebar( 'blog-left-widget' ) ) {
+						dynamic_sidebar( 'blog-left-widget' );
 					}?>
 				</div>
 			</div>
@@ -90,7 +90,7 @@ $blog_post_adds_field_ten = cs_get_option( 'blog_post_adds_field_ten' );
 					    <?php } }
 
 					endwhile;
-					the_posts_navigation();
+					post_pagination();
 					else :
 					get_template_part( 'template-parts/content', 'none' );
 					endif;
@@ -99,8 +99,8 @@ $blog_post_adds_field_ten = cs_get_option( 'blog_post_adds_field_ten' );
 			</div>
 			<div class="col-md-3">
 				<div class="right-sidebar">
-					<?php if ( is_active_sidebar( 'page-right' ) ) {
-						dynamic_sidebar( 'page-right' );
+					<?php if ( is_active_sidebar( 'blog-right-widget' ) ) {
+						dynamic_sidebar( 'blog-right-widget' );
 					}?>
 				</div>
 			</div>

@@ -13,8 +13,8 @@ get_header();
 		<div class="row section-padding">
 			<div class="col-md-2">
 				<div class="left-sidebar">
-					<?php if ( is_active_sidebar( 'error-left' ) ) {
-						dynamic_sidebar( 'error-left' );
+					<?php if ( is_active_sidebar( 'error-left-widget' ) ) {
+						dynamic_sidebar( 'error-left-widget' );
 					}?>
 				</div>
 			</div>
@@ -25,8 +25,8 @@ get_header();
 			</div>
 			<div class="col-md-3">
 				<div class="right-sidebar">
-					<?php if ( is_active_sidebar( 'error-right' ) ) {
-						dynamic_sidebar( 'error-right' );
+					<?php if ( is_active_sidebar( 'error-right-widget' ) ) {
+						dynamic_sidebar( 'error-right-widget' );
 					}?>
 				</div>
 			</div>

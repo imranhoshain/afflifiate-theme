@@ -101,8 +101,8 @@ if ( ! function_exists( 'post_pagination' ) ) :
    function post_pagination() {
      the_posts_pagination( array(
     'mid_size' => 2,
-    'prev_text' => __( '&laquo;', 'thenobility' ),
-    'next_text' => __( '&raquo', 'thenobility' ),
+    'prev_text' => __( '&laquo;', 'afflifiate-theme' ),
+    'next_text' => __( '&raquo', 'afflifiate-theme' ),
 ) );
    }
 endif;
