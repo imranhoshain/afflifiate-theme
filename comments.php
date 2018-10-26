@@ -70,5 +70,4 @@ if ( post_password_required() ) {
 
 	comment_form();
 	?>
-
 </div><!-- #comments -->

@@ -139,13 +139,16 @@ body {
     text-align: right;
 }
 
-.marquee-label,
-.marquee-post {
+.marquee-label {
     font-weight: bold;
     padding: 10px;
     float: left;
 }
 
+.marquee-post {
+    font-weight: bold;    
+    
+}
 
 /* Navbar Menu */
 
@@ -792,10 +795,28 @@ blockquote p {
     padding: 11px;
 }
 
+.afflifiate-billing-form p, .afflifiate-shipping-form p {
+    display: block;
+    width: 100% !important;
+}
 
+.woocommerce-form__input.woocommerce-form__input-checkbox.input-checkbox {
+    margin: 40px 0 5px 3px;
+    width: 0;
+}
 /* Responsive css code */
 
-@media (min-width: 1024px) and (max-width: 1200px) {}
+@media (min-width: 1024px) and (max-width: 1200px) {
+.site-title strong {
+    font-size: 18px;
+}
+
+.header-menu ul li a{
+font-size: 14px;
+}
+
+
+}
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
@@ -817,6 +838,9 @@ blockquote p {
     .after-header {
         text-align: left;
     }
+    .header-top-social > a {
+    margin-left: 5px;
+}
 
     .header-menu ul li a {
         font-size: 12px;
