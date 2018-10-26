@@ -89,7 +89,7 @@ $header_banner = wp_get_attachment_image_src( $header_middle_option['header_bann
 			</div>
 			<div class="col-md-11 col-sm-10 col-10">
 				<div class="marquee-post" style="background: <?php echo $marquee_post_option['marquee_post_bg_color']; ?>; color: <?php echo $marquee_post_option['marquee_post_text_color']; ?>;">
-					<marquee scrollamount="5">
+					<marquee onMouseOver="this.setAttribute('scrollamount', 0, 0);" OnMouseOut="this.setAttribute('scrollamount', 6, 0);">
 					<?php
 					if(!empty($marquee_post_option['marquee_post_text'])){
 						echo $marquee_post_option['marquee_post_text'];
@@ -103,6 +103,8 @@ $header_banner = wp_get_attachment_image_src( $header_middle_option['header_bann
 						);
 						$recent_posts = wp_get_recent_posts( $args);
 					foreach ($recent_posts as $recent) {
+					
+					echo get_the_post_thumbnail( $recent["ID"], 'thumbnail' );					
 					echo ' <a href="' . get_permalink($recent["ID"]) . '">' . $recent["post_title"] . '</a>. &nbsp &nbsp &nbsp &nbsp &nbsp;';
 					}}
 					?>

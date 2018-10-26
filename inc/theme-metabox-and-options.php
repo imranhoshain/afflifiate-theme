@@ -1,5 +1,3 @@
-
-
 <?php
 get_template_part('/inc/theme-options/cs-framework');
 

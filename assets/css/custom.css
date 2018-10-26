@@ -25,6 +25,9 @@
 /*======================================
 [ End table content ]
 ======================================*/
+body {
+    background: rgba(0, 0, 0, 0) url("http://stormrecoveryservices.com/afflifiate/wp-content/uploads/2018/10/body-bg.gif") repeat scroll 0 0;
+}
 
 .social-left-fixed {
     left: 0;
@@ -33,7 +36,7 @@
     text-align: center;
 }
 
-.social-left-fixed>a {
+.social-left-fixed > a {
     display: block;
     padding: 6px 0;
 }
@@ -62,6 +65,12 @@
     position: relative;
 }
 
+.header-bottom .marquee-post img {
+    height: 40px;
+    margin-right: 5px;
+    width: 50px;
+}
+
 .header-image img {
     width: 100%;
 }
@@ -87,7 +96,7 @@
     color: #F2D222
 }
 
-.header-top-social>a {
+.header-top-social > a {
     margin-left: 8px;
 }
 
@@ -110,7 +119,7 @@
     font-size: 24px;
 }
 
-.logo-right-text>h1 {
+.logo-right-text > h1 {
     text-transform: uppercase;
 }
 
@@ -158,6 +167,7 @@
     padding: 15px 12px !important;
     text-align: center;
     text-transform: uppercase;
+    -webkit-transition: none 0s ease 0s;
     transition: none 0s ease 0s;
 }
 
@@ -253,18 +263,23 @@ textarea {
 
 input {
     border: 1px solid #dcdcdc;
+    -webkit-box-shadow: none;
     box-shadow: none;
     display: block;
     font-family: sans-serif;
     font-size: 18px;
     margin: 0;
     padding: 10px;
+    -webkit-transition: border 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+    transition: border 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
     transition: box-shadow 0.3s ease 0s, border 0.3s ease 0s;
+    transition: box-shadow 0.3s ease 0s, border 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
     width: 100%;
 }
 
 input[type="text"]:focus {
     border: 1px solid #707070;
+    -webkit-box-shadow: 0 0 5px 1px #969696;
     box-shadow: 0 0 5px 1px #969696;
     outline: medium none;
 }
@@ -296,6 +311,7 @@ input[type="submit"]:hover {
     margin-bottom: 8px;
     background-color: #fff;
     border-color: #0b9 #e5e6e9;
+    -o-border-image: none;
     border-image: none;
     border-radius: 4px;
     border-style: solid;
@@ -329,6 +345,7 @@ input[type="submit"]:hover {
 .archive-content article .entry-meta span {
     border: 3px solid #f5f5f5;
     border-radius: 30px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
     font-size: 13px;
@@ -341,6 +358,7 @@ input[type="submit"]:hover {
 .archive-content article .read-more-warp a {
     border: 3px solid #f5f5f5;
     border-radius: 30px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
     font-size: 13px;
@@ -365,6 +383,7 @@ input[type="submit"]:hover {
     margin-bottom: 8px;
     background-color: #fff;
     border-color: #0b9 #e5e6e9;
+    -o-border-image: none;
     border-image: none;
     border-radius: 4px;
     border-style: solid;
@@ -409,6 +428,7 @@ blockquote p {
 .blog-page-content article .entry-meta span {
     border: 3px solid #f5f5f5;
     border-radius: 30px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
     font-size: 13px;
@@ -421,6 +441,7 @@ blockquote p {
 .blog-page-content article .read-more-warp a {
     border: 3px solid #f5f5f5;
     border-radius: 30px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
     font-size: 13px;
@@ -526,6 +547,7 @@ blockquote p {
 .page-section-content article {
     background-color: #fff;
     border-color: #0b9 #e5e6e9;
+    -o-border-image: none;
     border-image: none;
     border-radius: 4px;
     border-style: solid;
@@ -565,6 +587,7 @@ blockquote p {
 .single-page-post {
     background-color: #fff;
     border-color: #0b9 #e5e6e9;
+    -o-border-image: none;
     border-image: none;
     border-radius: 4px;
     border-style: solid;
@@ -576,7 +599,7 @@ blockquote p {
     padding: 8px;
 }
 
-.comment-form-comment>label {
+.comment-form-comment > label {
     display: block;
 }
 
@@ -599,6 +622,7 @@ blockquote p {
 
 .single-article-content .comments-area .submit {
     background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top, #006ad4, #003366) repeat scroll 0 0;
+    -webkit-box-shadow: 0 1px 3px #666666;
     box-shadow: 0 1px 3px #666666;
     color: #ffffff;
     font-family: Arial;
@@ -630,6 +654,7 @@ blockquote p {
     margin-bottom: 8px;
     background-color: #fff;
     border-color: #0b9 #e5e6e9;
+    -o-border-image: none;
     border-image: none;
     border-radius: 4px;
     border-style: solid;
@@ -663,6 +688,7 @@ blockquote p {
 .content-search-page.content-search-page article .entry-meta span {
     border: 3px solid #f5f5f5;
     border-radius: 30px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
     font-size: 13px;
@@ -675,6 +701,7 @@ blockquote p {
 .content-search-page article .read-more-warp a {
     border: 3px solid #f5f5f5;
     border-radius: 30px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
     font-size: 13px;
@@ -697,7 +724,7 @@ blockquote p {
     width: 100%;
 }
 
-.content-search-page .page-title>span {
+.content-search-page .page-title > span {
     color: #c15b66;
 }
 
@@ -711,6 +738,7 @@ blockquote p {
 .main-contact-form label {
     width: 100%;
 }
+
 .main-contact-form textarea {
     width: 100%;
 }
@@ -738,6 +766,31 @@ blockquote p {
     text-align: center;
 }
 
+.footer-area #scrollTop i.fa {
+    background: #0b9 none repeat scroll 0 0;
+    bottom: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+}
+
+
+/* woocommerce section css */
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+    float: left;
+    padding: 0;
+    position: relative;
+    width: 22.05%;
+    margin-left: 0;
+    border: 1px solid#ddd !important;
+    text-align: center;
+    padding: 11px;
+}
 
 
 /* Responsive css code */
@@ -868,8 +921,6 @@ blockquote p {
 }
 
 @media (min-width: 240px) and (max-width: 479px) {
-
-
 
     .site-title strong {
         font-size: 13px;

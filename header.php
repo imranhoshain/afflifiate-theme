@@ -21,15 +21,16 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> style="background-image: url(<?php echo esc_url(get_template_directory_uri()) .'/assets/images/body-bg.gif';?>); background-position: fixed;">
+<body <?php body_class(); ?>>
 <div id="page" class="site container">
 	<?php get_template_part( 'template-parts/headers/header-one'); //Chose you header style ?>
 <div id="content" class="site-content">
 <div class="social-left-fixed">
 	<?php
 	$social_link_array = cs_get_option( 'social_link_array' );
+	if(isset($social_link_array)){
 	foreach ($social_link_array as $single_social_link ) :
 	?>
 	<a href="<?php echo $single_social_link['social_link'] ?>" target="_blank"><i style="background: <?php echo $single_social_link['htop_icon_bg_color'] ?>; color: <?php echo $single_social_link['htop_icon_color'] ?>" class="<?php echo $single_social_link['social_icon'] ?>" aria-hidden="true"></i></a>
-	<?php endforeach; ?>
+	<?php endforeach;} ?>
 </div>

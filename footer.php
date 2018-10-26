@@ -81,10 +81,11 @@ $footer_category_page_bottom_adds = cs_get_option( 'footer_category_page_bottom_
                                 dynamic_sidebar( 'footer-top-category' );}
                             else {
                                 dynamic_sidebar( 'footer-top-other' );}
-                        }
+                        
                         ?>                        
                     </div>
                 </div>
+<?php } ?>
                 <div class="col-md-12">
                     <div class="footer-copywrite-text">
                         <p><?php echo $footer_copy_write_field['footer_copy_write_text'];?></p>
@@ -142,13 +143,14 @@ $footer_category_page_bottom_adds = cs_get_option( 'footer_category_page_bottom_
                                 dynamic_sidebar( 'footer-bottom-category' );}
                             else {
                                 dynamic_sidebar( 'footer-bottom-other' );}
-                        }
+                        
                         ?>                        
                     </div>
                 </div>
-                
+                <?php } ?>
             </div>            
         </div>
+         <div id="scrollTop"><i class="fa fa-chevron-up"></i></div>
     </footer>
     <!-- #colophon -->
 </div>

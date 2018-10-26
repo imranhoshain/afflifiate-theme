@@ -118,7 +118,7 @@ add_filter( 'comment_form_fields', 'afflifiate_theme_move_comment_field_to_botto
 
 //Excerpt Count Option
 function custom_short_excerpt($excerpt){
-	return substr($excerpt, 0, 300);
+	return substr($excerpt, 0, 200);
 }
 add_filter('the_excerpt', 'custom_short_excerpt');
 
@@ -162,3 +162,13 @@ include_once (get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php'
  */
 include_once (get_template_directory().'/inc/theme-metabox-and-options.php');
 
+
+/**
+ * Change number or products per row to 3
+ */
+add_filter('loop_shop_columns', 'loop_columns');
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 2; // 2 products per row
+	}
+}
